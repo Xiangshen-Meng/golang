@@ -11,3 +11,7 @@
 * Golangのインストール(Vagrant + Debian)
 * Golang開発の基本知識
 * Golangで何か書きましょうか(内容未定)
+
+### Golangの資料
+* [golang book](http://www.golang-book.com/)
+* [gobyexample](https://gobyexample.com/)
