@@ -5,6 +5,10 @@ Golangで「消費者と生産者」の問題を実現しよう！
 
 ### 課題２
 （初心者向け）
+GolangでJsonを分析しよう！
+（json内容がありませんでしたら、connpass APIを使いましょう）
+[Json](https://gobyexample.com/json)
+[net/http](http://golang.org/pkg/net/http/)
 
 ### 課題３
 （中級向け）
@@ -22,5 +26,6 @@ GolangでSSHを通じて、リモートのサーバを操作しよう！（自�
 * kubernetes
 * cayley
 * docker
+
 ソースコードを勉強したい方、どうぞ（私もできません。(T_T)）
 
