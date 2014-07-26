@@ -83,3 +83,68 @@ func main() {
   }
 }
 ```
+
+#### メソッド
+```go
+package main
+import "fmt"
+
+func plusab(a, b int) (int, string) {
+  return a+b, "OK"
+}
+
+func main() {
+  res, s := plusab(1, 3)
+  fmt.Println(res, s)
+}
+```
+```go
+package main
+import "fmt"
+
+func printjson(j map[string]interface{}) {
+  for k, v := range j {
+    if val, ok := v.(string); ok {
+      fmt.Println("Key:", k, " Value:", val)
+    }
+  }
+}
+
+func main() {
+
+  mjson := map[string]interface{}{}
+  mjson["name"] = "Let's Go !"
+  mjson["birthday"] = 201407
+  fmt.Printf("%#v\n", mjson)
+
+  printjson(mjson)
+}
+```
+
+```go
+package main
+import "fmt"
+
+func printjson(j map[string]interface{}) {
+  for _, v := range j {
+    switch v := v.(type) {
+      default:
+        fmt.Println("Default")
+      case string:
+        fmt.Println("It's string ", v)
+      case int:
+        fmt.Println("It's int ", v)
+    }
+  }
+}
+
+func main() {
+
+  mjson := map[string]interface{}{}
+  mjson["name"] = "Let's Go !"
+  mjson["birthday"] = 201407
+  fmt.Printf("%#v\n", mjson)
+
+  printjson(mjson)
+}
+```
