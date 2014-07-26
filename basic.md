@@ -36,10 +36,16 @@ func main() {
   sarr = append(s, "e", "f")
   fmt.Println(sarr)
   
-  var s []string
-  s.append("Hello")
-  s.append(" World")
-  fmt.Println(s)
+  js := map[string]string{}
+  //js := make(map[string]string)
+  js["name"] = "Golang"
+  js["birthday"] = "2009"
+  fmt.Println(js)
+
+  mjson := map[string]interface{}{}
+  mjson["name"] = "Let's Go !"
+  mjson["birthday"] = 201407
+  fmt.Printf("%#v", mjson)
 }
 ```
 [Array & Slice](http://blog.golang.org/go-slices-usage-and-internals)
@@ -50,6 +56,10 @@ package main
 import "fmt"
 
 func main() {
+  js := map[string]string{}
+  js["name"] = "Golang"
+  js["birthday"] = "2009"
+  
   for i := 0; i <= 9; i++ {
     fmt.Println(i)
   }
@@ -59,6 +69,17 @@ func main() {
     fmt.Println("It's true")
   }
   
+  if v, has := js["name"]; has {
+    fmt.Println(v)
+  }
   
+  if v, has := js["na"]; has {
+    fmt.Println(v)
+  }
+  
+  for k, v := range js {
+    fmt.Println("key:", k)
+    fmt.Println("value:", v)
+  }
 }
 ```
