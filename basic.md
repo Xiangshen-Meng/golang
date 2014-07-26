@@ -195,3 +195,44 @@ func main() {
     measure(c)
 }
 ```
+#### goroutine & channel
+```go
+package main
+
+import "fmt"
+import "time"
+
+func f(from string) {
+    for i := 0; i < 3; i++ {
+        time.Sleep(1000 * time.Millisecond)
+        fmt.Println(from, ":", i)
+    }
+}
+
+func main() {
+
+    f("direct")
+    go f("goroutine")
+    go func(msg string) {
+        fmt.Println(msg)
+    }("going")
+
+    var input string
+    fmt.Scanln(&input)
+    fmt.Println("done")
+}
+```
+```go
+package main
+
+import "fmt"
+
+func main() {
+
+    messages := make(chan string)
+    go func() { messages <- "ping" }()
+
+    msg := <-messages
+    fmt.Println(msg)
+}
+```
