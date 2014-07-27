@@ -1,4 +1,5 @@
 ### Packageの使い方
+[GoDoc](https://godoc.org/)
 
 #### hgをインストール
 ```bash
@@ -18,3 +19,10 @@ $ make install
 # Solaris 11 Express
 $ pkg install SUNWmercurial
 ```
+
+#### go get
+```go
+go get "code.google.com/p/go.crypto/ssh"
+```
+
+
