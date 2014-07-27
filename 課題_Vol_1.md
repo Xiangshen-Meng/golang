@@ -53,6 +53,8 @@ web applicationのHello worldを立ち上げましょう！
 
 （申し訳ございません、私もできません、Golangでweb serviceを作り方、どうぞ）
 
+http://go-tour-jp.appspot.com/#57
+
 ### 課題４
 （中級向け）
 
